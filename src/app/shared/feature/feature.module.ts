@@ -4,6 +4,7 @@ import {PageNotFoundComponent} from '@app/shared/feature/page-not-found/page-not
 import {FooterComponent} from '@app/shared/feature/footer/footer.component';
 import {CommonModule} from '@angular/common';
 import {UIRouterModule} from '@uirouter/angular';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import {UIRouterModule} from '@uirouter/angular';
   ],
   imports: [
     CommonModule,
-    UIRouterModule
+    UIRouterModule,
+    FormsModule
   ],
   exports: [
     HeaderComponent,
