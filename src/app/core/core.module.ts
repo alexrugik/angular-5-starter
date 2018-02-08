@@ -18,7 +18,8 @@ import {HttpClientModule} from '@angular/common/http';
   declarations: [],
   providers: [
     /* our own custom services  */
-  ]
+  ],
+  exports: [CommonModule]
 })
 export class CoreModule {
   /* make sure CoreModule is imported only by one NgModule the AppModule */

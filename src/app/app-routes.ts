@@ -2,42 +2,47 @@ import {STATES} from '@app/shared/consts/states';
 import {HomeComponent} from '@app/home/home.component';
 import {Ng2StateDeclaration} from '@uirouter/angular';
 import {PageNotFoundComponent} from '@app/shared/feature/page-not-found/page-not-found.component';
-import {HeaderComponent} from '@app/shared/feature/header/header.component';
-import {FooterComponent} from '@app/shared/feature/footer/footer.component';
 import {MainComponent} from '@app/main/main.component';
 import {AppComponent} from '@app/app.component';
+import {AboutComponent} from '@app/about/about.component';
 
-export const appState = {
+export const appState: Ng2StateDeclaration = {
   abstract: true,
   name: STATES.APP,
   url: '',
-  redirect: 'app.main.home',
   component: AppComponent
 };
 
-export const mainState = {
+export const mainState: Ng2StateDeclaration = {
   abstract: true,
   name: STATES.MAIN,
   url: '',
-  redirect: 'app.main.home',
   component: MainComponent
 };
 
-export const homeState = {
+export const homeState: Ng2StateDeclaration = {
   name: STATES.HOME,
   url: '/home',
-  views: {
-    header: {component: HeaderComponent},
-    content: {component: HomeComponent},
-    footer: {component: FooterComponent}
-  }
+  component: HomeComponent,
 };
 
-export const pageNotFound = {
+export const aboutState: Ng2StateDeclaration = {
+  name: STATES.ABOUT,
+  url: '/about',
+    component: AboutComponent,
+};
+
+export const pageNotFound: Ng2StateDeclaration = {
   name: STATES.PAGE_NOT_FOUND,
   url: 'page-not-found',
   component: PageNotFoundComponent
 };
 
 
-export const states: Ng2StateDeclaration[] = [appState, mainState, homeState, pageNotFound];
+export const states: Ng2StateDeclaration[] = [
+  appState,
+  mainState,
+  homeState,
+  aboutState,
+  pageNotFound
+];

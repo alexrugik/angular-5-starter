@@ -22,6 +22,10 @@ import {FeatureModule} from '@app/shared/feature/feature.module';
     AppRoutingModule,
     FeatureModule
   ],
+  exports: [
+    CoreModule,
+    FeatureModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })
