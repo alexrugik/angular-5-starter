@@ -1,14 +1,16 @@
-import {UIRouterModule} from '@uirouter/angular';
+import {UIRouter, UIRouterModule} from '@uirouter/angular';
 import {states} from '@app/app-routes';
-import {NgModule} from '@angular/core';
-import {uiRouterConfigFn} from '@app/app-routing.config';
+import {Injector, NgModule} from '@angular/core';
+import {STATES} from '@app/shared/consts/states';
 
 @NgModule({
   imports: [
     UIRouterModule.forRoot({
       states,
       useHash: false,
-      config: uiRouterConfigFn
+      config (router: UIRouter, injector: Injector) {
+        router.urlService.rules.otherwise({state: STATES.PAGE_NOT_FOUND});
+      }
     })
   ],
   exports: [UIRouterModule]
