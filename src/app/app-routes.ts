@@ -5,6 +5,8 @@ import {PageNotFoundComponent} from '@app/shared/feature/page-not-found/page-not
 import {MainComponent} from '@app/main/main.component';
 import {AppComponent} from '@app/app.component';
 import {AboutComponent} from '@app/about/about.component';
+import {RegistrationComponent} from '@app/shared/feature/auth/registration/registration.component';
+import {SignUpComponent} from '@app/shared/feature/auth/sign-up/sign-up.component';
 
 export const appState: Ng2StateDeclaration = {
   abstract: true,
@@ -29,13 +31,25 @@ export const homeState: Ng2StateDeclaration = {
 export const aboutState: Ng2StateDeclaration = {
   name: STATES.ABOUT,
   url: '/about',
-    component: AboutComponent,
+  component: AboutComponent,
 };
 
-export const pageNotFound: Ng2StateDeclaration = {
+export const pageNotFoundState: Ng2StateDeclaration = {
   name: STATES.PAGE_NOT_FOUND,
-  url: 'page-not-found',
+  url: '/page-not-found',
   component: PageNotFoundComponent
+};
+
+export const registrationState: Ng2StateDeclaration = {
+  name: STATES.REGISTRATION,
+  url: '/registration',
+  component: RegistrationComponent
+};
+
+export const signUpState: Ng2StateDeclaration = {
+  name: STATES.SIGN_UP,
+  url: '/sign-up',
+  component: SignUpComponent
 };
 
 
@@ -44,5 +58,7 @@ export const states: Ng2StateDeclaration[] = [
   mainState,
   homeState,
   aboutState,
-  pageNotFound
+  registrationState,
+  signUpState,
+  pageNotFoundState
 ];

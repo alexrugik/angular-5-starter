@@ -4,22 +4,38 @@ import {
   Optional,
   SkipSelf
 } from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {HttpClientModule} from '@angular/common/http';
 
-/* our own custom services  */
+import {
+  AuthServiceConfig,
+  FacebookLoginProvider,
+  GoogleLoginProvider
+} from 'angular4-social-login';
+
+
+const config = new AuthServiceConfig([
+  {
+    id: GoogleLoginProvider.PROVIDER_ID,
+    provider: new GoogleLoginProvider('6155373716-qdamec0p9rmfh42eap61t2icfjfa1fb5.apps.googleusercontent.com')
+  },
+  {
+    id: FacebookLoginProvider.PROVIDER_ID,
+    provider: new FacebookLoginProvider('1991845311041561')
+  }
+]);
+
+export function provideConfig() {
+  return config;
+}
 
 @NgModule({
-  imports: [
-    /* 3rd party libraries */
-    CommonModule,
-    HttpClientModule,
-  ],
+  imports: [],
   declarations: [],
   providers: [
-    /* our own custom services  */
+    {
+      provide: AuthServiceConfig,
+      useFactory: provideConfig
+    }
   ],
-  exports: [CommonModule]
 })
 export class CoreModule {
   /* make sure CoreModule is imported only by one NgModule the AppModule */
