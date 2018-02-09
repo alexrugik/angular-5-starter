@@ -3,8 +3,8 @@ import {LazyComponent} from '@app/lazy/lazy.component';
 
 
 export const lazyState = {
-  name: STATES.LAZY,
-  url: '/child',
+  name: STATES.APP_LAZY,
+  url: '/lazy',
   component: LazyComponent
 };
 

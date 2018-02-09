@@ -1,11 +1,11 @@
 import {STATES} from '@app/shared/consts/states';
-import {HomeComponent} from '@app/home/home.component';
-import {Ng2StateDeclaration, UIView} from '@uirouter/angular';
+import {
+  Ng2StateDeclaration,
+  UIView
+} from '@uirouter/angular';
+
 import {PageNotFoundComponent} from '@app/shared/feature/page-not-found/page-not-found.component';
 import {AppComponent} from '@app/app.component';
-import {AboutComponent} from '@app/about/about.component';
-import {RegistrationComponent} from '@app/shared/feature/auth/registration/registration.component';
-import {SignUpComponent} from '@app/shared/feature/auth/sign-up/sign-up.component';
 
 export const appState: Ng2StateDeclaration = {
   abstract: true,
@@ -15,21 +15,27 @@ export const appState: Ng2StateDeclaration = {
 };
 
 export const homeState: Ng2StateDeclaration = {
-  name: STATES.HOME,
+  name: STATES.APP_HOME_LOADING,
   url: '/home',
-  component: HomeComponent,
+  loadChildren: './home/home.module#HomeModule'
 };
 
 export const aboutState: Ng2StateDeclaration = {
-  name: STATES.ABOUT,
+  name: STATES.APP_ABOUT_LOADING,
   url: '/about',
-  component: AboutComponent,
+  loadChildren: './about/about.module#AboutModule'
 };
 
 export const lazyState: Ng2StateDeclaration = {
-  name: STATES.LAZY_LOADING,
+  name: STATES.APP_LAZY_LOADING,
   url: '/lazy',
   loadChildren: './lazy/lazy.module#LazyModule'
+};
+
+export const authState: Ng2StateDeclaration = {
+  name: STATES.AUTH_LOADING,
+  url: '',
+  loadChildren: '../shared/feature/auth/auth.module#AuthModule'
 };
 
 export const pageNotFoundState: Ng2StateDeclaration = {
@@ -38,25 +44,10 @@ export const pageNotFoundState: Ng2StateDeclaration = {
   component: PageNotFoundComponent
 };
 
-export const registrationState: Ng2StateDeclaration = {
-  name: STATES.REGISTRATION,
-  url: '/registration',
-  component: RegistrationComponent
-};
-
-export const signUpState: Ng2StateDeclaration = {
-  name: STATES.SIGN_UP,
-  url: '/sign-up',
-  component: SignUpComponent
-};
-
-
 export const states: Ng2StateDeclaration[] = [
   appState,
   homeState,
   aboutState,
-  registrationState,
-  signUpState,
   lazyState,
   pageNotFoundState
 ];

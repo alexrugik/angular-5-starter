@@ -7,10 +7,10 @@ import {STATES} from '@app/shared/consts/states';
   imports: [
     UIRouterModule.forRoot({
       states,
-      otherwise: { state: STATES.HOME },
+      otherwise: {state: STATES.APP_HOME},
       useHash: false,
-      config (router: UIRouter, injector: Injector) {
-        router.urlService.rules.otherwise({state: STATES.PAGE_NOT_FOUND});
+      config(router: UIRouter, injector: Injector) {
+        router.urlService.rules.otherwise({state: STATES.APP_HOME});
       }
     })
   ],

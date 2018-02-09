@@ -8,17 +8,17 @@ export const headerConfig: HeaderConfig = {
   navItems: [
     {
       title: 'Home',
-      stateName: STATES.HOME,
+      stateName: STATES.APP_HOME,
       stateParams: {},
     },
     {
       title: 'About',
-      stateName: STATES.ABOUT,
+      stateName: STATES.APP_ABOUT,
       stateParams: {},
     },
     {
       title: 'Lazy Loading Module',
-      stateName: 'app.lazy',
+      stateName: STATES.APP_LAZY,
       stateParams: {},
     },
   ]
