@@ -1,6 +1,7 @@
 import {Component} from '@angular/core';
 import {HeaderConfig} from '@app/shared/declarations/header-config.declaration';
 import {STATES} from '@app/shared/consts/states';
+import {AUTH_STATES} from '@app/shared/feature/auth/auth-routes';
 
 export const headerConfig: HeaderConfig = {
   title: 'Angular Starter',
@@ -18,6 +19,11 @@ export const headerConfig: HeaderConfig = {
     {
       title: 'Lazy Loading Module',
       stateName: STATES.APP_LAZY,
+      stateParams: {},
+    },
+    {
+      title: 'test',
+      stateName: AUTH_STATES.AUTH_LOGIN,
       stateParams: {},
     }
   ]
