@@ -1,8 +1,10 @@
 /* 3rd party libraries */
 import {
   NgModule,
+  NgModuleFactoryLoader,
   Optional,
-  SkipSelf
+  SkipSelf,
+  SystemJsNgModuleLoader
 } from '@angular/core';
 
 import {
@@ -31,10 +33,8 @@ export function provideConfig() {
   imports: [],
   declarations: [],
   providers: [
-    {
-      provide: AuthServiceConfig,
-      useFactory: provideConfig
-    }
+    {provide: AuthServiceConfig, useFactory: provideConfig},
+    {provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader}
   ],
 })
 export class CoreModule {

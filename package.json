@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "build:prod": "ng build --target production --build-optimizer --vendor-chunk",
+     "build:prod": "ng build --target production --build-optimizer --vendor-chunk",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
