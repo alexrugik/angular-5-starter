@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-lazy',
@@ -7,7 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LazyComponent implements OnInit {
 
-  constructor() { }
+  constructor(meta: Meta, title: Title) {
+    title.setTitle('My Lazy page');
+    meta.addTags([
+      {
+        name: 'author',
+        content: 'my-app.com'
+      }
+    ]);
+  }
 
   ngOnInit() {
   }
