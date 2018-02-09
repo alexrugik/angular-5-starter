@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-
 import {HeaderConfig} from '@app/shared/declarations/header-config.declaration';
 import {STATES} from '@app/shared/consts/states';
 
@@ -20,7 +19,7 @@ export const headerConfig: HeaderConfig = {
       title: 'Lazy Loading Module',
       stateName: STATES.APP_LAZY,
       stateParams: {},
-    },
+    }
   ]
 };
 

@@ -13,8 +13,5 @@ export const STATES = {
 
   AUTH_LOADING: 'auth.**',
 
-  AUTH_LOADING_REGISTRATION: 'auth.registration',
-  AUTH_LOADING_SIGN_UP: 'auth.sign-up',
-
   PAGE_NOT_FOUND: 'pageNotFound',
 };

@@ -34,8 +34,8 @@ export const lazyState: Ng2StateDeclaration = {
 
 export const authState: Ng2StateDeclaration = {
   name: STATES.AUTH_LOADING,
-  url: '',
-  loadChildren: '../shared/feature/auth/auth.module#AuthModule'
+  url: '/auth',
+  loadChildren: './shared/feature/auth/auth.module#AuthModule'
 };
 
 export const pageNotFoundState: Ng2StateDeclaration = {
@@ -49,5 +49,6 @@ export const states: Ng2StateDeclaration[] = [
   homeState,
   aboutState,
   lazyState,
-  pageNotFoundState
+  pageNotFoundState,
+  authState
 ];
