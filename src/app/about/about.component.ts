@@ -7,7 +7,6 @@ import {Meta, Title} from '@angular/platform-browser';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
   constructor(meta: Meta, title: Title) {
     title.setTitle('My About page');
     meta.addTags([

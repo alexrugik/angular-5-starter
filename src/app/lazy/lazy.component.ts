@@ -7,7 +7,6 @@ import {Meta, Title} from '@angular/platform-browser';
   styleUrls: ['./lazy.component.scss']
 })
 export class LazyComponent implements OnInit {
-
   constructor(meta: Meta, title: Title) {
     title.setTitle('My Lazy page');
     meta.addTags([

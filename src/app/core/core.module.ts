@@ -9,9 +9,10 @@ import {
 
 import {
   AuthServiceConfig,
+  GoogleLoginProvider,
   FacebookLoginProvider,
-  GoogleLoginProvider
-} from 'angular4-social-login';
+  LinkedinLoginProvider
+} from 'ng4-social-login';
 
 
 const config = new AuthServiceConfig([
@@ -22,6 +23,10 @@ const config = new AuthServiceConfig([
   {
     id: FacebookLoginProvider.PROVIDER_ID,
     provider: new FacebookLoginProvider('1991845311041561')
+  },
+  {
+    id: LinkedinLoginProvider.PROVIDER_ID,
+    provider: new LinkedinLoginProvider('771qfk0ybk6wc3')
   }
 ]);
 
