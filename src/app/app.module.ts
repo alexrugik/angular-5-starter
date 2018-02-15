@@ -13,8 +13,8 @@ import {AppComponent} from './app.component';
   ],
   imports: [
     BrowserModule,
-    CoreModule,
     AppRoutingModule,
+    CoreModule,
     FeatureModule
   ],
   bootstrap: [UIView]

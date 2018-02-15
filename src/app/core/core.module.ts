@@ -14,6 +14,8 @@ import {
   LinkedinLoginProvider
 } from 'ng4-social-login';
 
+import {TestService} from '@app/core/test.service';
+
 
 const config = new AuthServiceConfig([
   {
@@ -38,6 +40,7 @@ export function provideConfig() {
   imports: [],
   declarations: [],
   providers: [
+    TestService,
     {provide: AuthServiceConfig, useFactory: provideConfig},
     {provide: NgModuleFactoryLoader, useClass: SystemJsNgModuleLoader}
   ],
