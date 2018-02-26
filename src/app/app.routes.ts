@@ -6,6 +6,7 @@ import {
 
 import {PageNotFoundComponent} from '@app/shared/feature/page-not-found/page-not-found.component';
 import {AppComponent} from '@app/app.component';
+import {TodoModule} from '@app/todo/todo.module';
 
 export const appState: Ng2StateDeclaration = {
   abstract: true,
@@ -32,6 +33,12 @@ export const lazyState: Ng2StateDeclaration = {
   loadChildren: './lazy/lazy.module#LazyModule'
 };
 
+export const todoState: Ng2StateDeclaration = {
+  name: STATES.APP_TODO_LAZY_LOADING,
+  url: '/todo',
+  loadChildren: './todo/todo.module#TodoModule'
+};
+
 export const authState: Ng2StateDeclaration = {
   name: STATES.AUTH_LOADING,
   url: '/auth',
@@ -50,5 +57,6 @@ export const states: Ng2StateDeclaration[] = [
   aboutState,
   lazyState,
   pageNotFoundState,
-  authState
+  authState,
+  todoState
 ];

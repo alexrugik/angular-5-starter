@@ -1,7 +1,7 @@
 export interface NavItems {
   title: string;
   stateName: string;
-  stateParams: any;
+  stateParams?: any;
 }
 
 export interface HeaderConfig {

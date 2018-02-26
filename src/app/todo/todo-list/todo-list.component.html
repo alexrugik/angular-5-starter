@@ -1,0 +1,9 @@
+<ul>
+  <li *ngFor="let todo of todoList | async">{{todo.name}}</li>
+</ul>
+
+<input #newName type="text">
+<button (click)="onChangeName(newName.value)">Change name</button>
+<p>
+  <span>Name: {{name}}</span>
+</p>

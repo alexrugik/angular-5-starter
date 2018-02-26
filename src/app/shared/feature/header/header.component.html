@@ -9,7 +9,7 @@
     <ul class="navbar-nav mr-auto">
       <li *ngFor="let item of config.navItems"
           class="nav-item active">
-        <a class="nav-link" [uiSref]="item.stateName">{{item.title}}<span class="sr-only"></span></a>
+        <a class="nav-link" uiSrefActive="active" [uiSref]="item.stateName">{{item.title}}<span class="sr-only"></span></a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0" novalidate>

@@ -1,5 +1,5 @@
 import {UIRouter, UIRouterModule} from '@uirouter/angular';
-import {states} from '@app/app-routes';
+import {states} from '@app/app.routes';
 import {Injector, NgModule} from '@angular/core';
 import {STATES} from '@app/shared/consts/states';
 

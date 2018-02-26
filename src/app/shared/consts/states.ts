@@ -10,6 +10,10 @@ export const STATES = {
   APP_LAZY_LOADING: 'app.lazy.**',
   APP_LAZY: 'app.lazy',
 
+  APP_TODO_LAZY_LOADING: 'app.todo.**',
+  APP_TODO: 'app.todo',
+  APP_TODO_ADD: 'app.todo.add',
+  APP_TODO_LIST: 'app.todo.list',
 
   AUTH_LOADING: 'auth.**',
 
